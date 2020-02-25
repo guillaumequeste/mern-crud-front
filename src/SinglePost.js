@@ -17,14 +17,14 @@ const SinglePost = props => {
         <div className="row">
             <div className="col-md-8 offset-md-2 pt-3 pb-2">
                 <h1>{post.title}</h1>
-                <div className="lead pt-3">{renderHTML(post && post.content)}</div>
+                <div className="lead pt-3">{renderHTML(post.content)}</div>
                 <p>
                     Author <span className="badge">{post.user}</span> Published on{' '}
                     <span className="badge">{new Date(post.createdAt).toLocaleString()}</span>
                 </p>
             </div>
         </div>
-    )
+    );
 
     return (
         <div className="container pb-5">
