@@ -210,14 +210,30 @@
     une page s'ouvre, cliquer sur 'Log In'
                -> heroku apps (pour voir mes projets heroku)
                -> git init
-               -> git ad .
+               -> git add .
                -> git commit -m "first commit"
                -> heroku git:remote -a gui-react-node-crud
                -> git push heroku master
                -> heroku open
 
+    
+    En local :
     cd server
     yarn start
     cd client
     yarn start
     http://localhost:3000/
+
+
+
+
+Pour ajouter des images :
+- stocker les images dans 'google images'
+- chaque image a une adresse url
+- 'server' -> 'models' -> 'post.js'     (rajouter imgurl)
+           ->'controllers' -> 'post.js' (rajouter imgurl)
+- 'client' -> 'App.js'                  (rajouter imgurl)
+           -> 'Create.js'               (rajouter imgurl)
+           -> 'SinglePost.js'           (rajouter imgurl)
+           -> 'UpdatePost.js'           (rajouter imgurl)
+- pour afficher l'image : <img src={`${post.imgurl}`} />
