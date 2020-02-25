@@ -48,7 +48,7 @@ const App = () => {
         <div className="container pb-5">
             <Nav />
             <br />
-            <h1 style={{'color': 'purple'}}>MERN CRUD</h1>
+            <h1 style={{'color': 'purple', 'fontWeight': 'bold'}}>MERN CRUD</h1>
             <hr />
             {posts.map((post, i) => (
                 <div className="row" key={post._id} style={{ borderBottom: '1px solid silver' }}>

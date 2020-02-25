@@ -30,7 +30,7 @@ const UpdatePost = props => {
                 setContent(content);
             })
             .catch(error => alert('Error loading single post'));
-    });
+    }, []);
 
     // onchange event handler
     const handleChange = name => event => {

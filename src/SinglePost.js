@@ -11,7 +11,7 @@ const SinglePost = props => {
             .get(`${process.env.REACT_APP_API}/post/${props.match.params.slug}`)
             .then(response => setPost(response.data))
             .catch(error => alert('Error loading single post'));
-    });
+    }, []);
 
     const showSinglePost = () => (
         <div className="row">
