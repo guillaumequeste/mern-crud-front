@@ -224,6 +224,9 @@
     yarn start
     http://localhost:3000/
 
+    En ligne :
+    https://gui-react-node-crud.herokuapp.com/
+
 
 
 
