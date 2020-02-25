@@ -1,0 +1,19 @@
+Se connecter à son compte mongodb
+Build a cluster
+Sélectionner un fournisseur et une région (gratuite - free)
+Create cluster
+Cliquer sur 'Collections'
+Cliquer sur 'Add my own data'
+DATABASE NAME : 'test'
+COLLECTION NAME : 'Collection0'
+Cliquer sur 'Create'
+Cliquer sur 'Overview'
+Cliquer sur 'Connect'
+Cliquer sur 'Add a different IP Address'
+Entrer = '0.0.0.0/0' (meilleure pratique : entrer une adresse IP pour plus de sécurité mais ici nous ne savons pas d'où viennent les requêtes après déploiement) (on peut le faire après en cliquant sur 'Network Access' à gauche)
+Cliquer sur 'Add IP Address'
+Entrer un username et un password (on peut le faire après en cliquant sur 'Database Access' à gauche)
+Cliquer sur 'Create MongoDB User'
+Cliquer sur 'Choose a connection method'
+Cliquer sur 'ConnectYour Application'
+Copier la string 'mongodb+srv...'

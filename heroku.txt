@@ -1,0 +1,81 @@
+Déploiement sur heroku :
+
+    - Dans le dossier 'server' :
+        - à la racine, créer un fichier '.gitignore'
+        - à la racine, créer un fichier 'Procfile' (web: node server.js)
+
+    - Dans le dossier 'client' :
+        - à la racine, créer un fichier'.gitignore' avec .env dedans
+        - à la racine, créer un fichier 'Procfile' (web: node server.js)
+        - à la racine, créer un fichier 'server.js'
+        - supprimer le fichier 'yarn.lock'
+
+    - heroku.com
+        -> login
+        -> en haut à droite, 'new'->'create new app'
+            'App name' : gui-react-node-crud-api
+            'Choose a region' : Europe
+                -> Create app
+        -> en haut à gauche cliquer sur 'heroku'
+        -> cliquer sur l'app (ici 'gui-patrimoine-api')
+        ->settings
+        ->reveal config vars
+            -> rentrer les variables :
+                KEY : DATABASE
+                VALUE : mongodb+...
+                KEY : JWT_SECRET
+                    |
+                    |
+
+    - google -> install heroku cli (suaf si c'est déjà fait)
+        -> https://devcenter.heroku.com/articles/heroku-cli
+        -> macOS->download the installer
+        -> installer heroku
+    
+    Terminal :
+        -> cd client
+        -> heroku
+        -> heroku login
+        -> press any key to login...
+        Une page s'ouvre : cliquer sur 'Log In' -> 'Logged In' (terminal : Logged in as gui...)
+        -> cd ..
+        -> ls
+        -> cd server
+        -> git init
+        -> git add .
+        -> git commit -m "first commit"
+        -> heroku git:remote -a gui-react-node-crud-api
+        -> git push heroku master
+        -> heroku open
+        (s'il y a des erreurs -> heroku ps:restart; heroku logs --tail) // pour voir les erreurs
+
+        A l'adresse : https://gui-react-node-crud-api.herokuapp.com/
+            -> CANNOT GET
+        On peut voir les posts : https://gui-react-node-crud-api.herokuapp.com/api/posts
+
+    - heroku.com
+        -> cliquer en haut à gauche sur 'heroku'
+        -> cliquer en haut à droite sur 'new'->'create a new app'
+            'App name' : gui-react-node-crud
+            'Choose a region' : Europe
+                -> Create app
+        ->settings
+        ->reveal config vars
+            -> rentrer les variables :
+                KEY : REACT_APP_API
+                VALUE : https://gui-patrimoine-api.herokuapp.com/api
+
+    Terminal :
+        -> cd ..
+        -> ls
+        -> cd client
+        -> heroku login
+        -> press any key...
+        Une page s'ouvre, cliquer sur 'Log In' -> 'Logged In' (terminal : Logged in as gui...)
+        -> heroku apps (pour voir mes projets heroku)
+        -> git init
+        -> git add .
+        -> git commit -m "first commit"
+        -> heroku git:remote -a gui-react-node-crud
+        -> git push heroku master
+        -> heroku open
