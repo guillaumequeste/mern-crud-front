@@ -79,3 +79,9 @@ Déploiement sur heroku :
         -> heroku git:remote -a gui-react-node-crud
         -> git push heroku master
         -> heroku open
+
+- Pour mettre à jour le projet (partie front par exemple):
+    -> cd client
+    -> git add -A
+    -> git commit -m "update title"
+    -> git push -f heroku
