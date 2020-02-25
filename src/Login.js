@@ -13,7 +13,7 @@ const Login = (props) => {
     const { name, password } = state; // destructure values from state
     useEffect(() => {
         getUser() && props.history.push('/');
-    }, [])
+    })
 
     // onchange event handler
     const handleChange = name => event => {
