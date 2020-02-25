@@ -149,7 +149,7 @@
     dossier 'client'->'.gitignore' avec .env dedans
     heroku.com
     login
-    en hait à droite, 'new'->'create new app'
+    en haut à droite, 'new'->'create new app'
     App name : gui-react-node-crud-api
     choose a region : Europe
     ->create app
@@ -205,7 +205,10 @@
     dossier 'client', à la racine ->créer un fichier 'Procfile' (web: node server.js)
     dossier 'client', à la racine ->créer un fichier 'server.js'
     dans le dossier 'client', supprimer le fichier 'yarn.lock'
-    terminal : -> heroku login
+    terminal : -> cd ..
+               -> ls
+               -> cd client
+               -> heroku login
                -> press any key...
     une page s'ouvre, cliquer sur 'Log In'
                -> heroku apps (pour voir mes projets heroku)
