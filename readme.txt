@@ -2,9 +2,11 @@
 2) Créer dossier 'client' (react app)
 3) Créer dossier 'server'
 4) MongoDB Atlas
-5) Mettre en ligne sur heroku
-6) Faire fonctionner l'application
-7) Session storage
+5) Rajouter des champs
+6) Images
+7) Mettre en ligne sur heroku
+8) Faire fonctionner l'application
+9) Session storage
 
 
 1) Créer un dossier 'mern-crud'
@@ -85,10 +87,22 @@
     
     si erreur : google -> mongoose deprecation warning
 
+
+5) Pour rajouter et modifier des champs, faire les modifications dans les fichiers :
+    'server' -> 'models' -> 'post.js'
+    'server' -> 'controllers' -> 'post.js'
+    'client' -> 'App.js'
+    'client' -> 'Create.js'
+    'client' -> 'SinglePost.js'
+    'client' -> 'UpdatePost.js'
+
+6) Les images doivent être dans un album partagé dans Google Photos (créer un album partagé -> créer un lien)
+    - on crée un champ 'imgurl' dans les formulaires
+    - <img src={`${post.imgurl}`}/>
     
-5) Metrre el ligne heroku (voir heroku.txt) : https://gui-patrimoine.herokuapp.com/ 
+7) Metrre el ligne heroku (voir heroku.txt) : https://gui-patrimoine.herokuapp.com/ 
     
-6) En local :
+8) En local :
     -> cd server
     -> yarn start
     Ouvrir un autre terminal :
@@ -100,5 +114,5 @@
    En ligne :
     https://gui-react-node-crud.herokuapp.com/
 
-7) inspecteur->Application->Session storage
+9) inspecteur->Application->Session storage
    inspecteur->Application->Clear Storage
